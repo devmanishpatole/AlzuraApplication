@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Alzura Application</string>
+    <string name="no_internet_connection">No Internet Connection!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="enter_valid_email">Enter valid email</string>
+    <string name="enter_valid_password">Enter valid password</string>
+    <string name="loading">loading</string>
+    <string name="order_id">Order ID</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="date">Created date</string>
+    <string name="price">Price</string>
+    <string name="logout">Logout</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Date Range</string>
+    <string name="no_orders_found">No orders found!</string>
+    <string name="select_sort_order">Select a sort order</string>
+    <string name="descending">Descending</string>
+    <string name="ascending">Ascending</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_message">Enter your email and password to sign in to your account</string>
+</resources>

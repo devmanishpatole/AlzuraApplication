@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParentLayout">
+
+
+    <RelativeLayout
+        style="@style/MatchParentLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/noOrders"
+            style="@style/WrapContentLayout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/no_orders_found"
+            android:textSize="@dimen/text_extra_large"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/internetError"
+            style="@style/WrapContentLayout"
+            android:layout_above="@id/noOrders"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="no_internet_connection.json"
+            app:lottie_loop="true"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderList"
+            style="@style/MatchParentLayout"
+            android:padding="@dimen/spacing_extra_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/SectionLayout"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            style="@style/SectionLayout"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/sort"
+                style="@style/WrapContentLayout"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/sort" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/filter"
+                style="@style/WrapContentLayout"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/filter" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

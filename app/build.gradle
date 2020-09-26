@@ -3,6 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     compileSdkVersion rootProject.ext.compile_sdk_version
@@ -82,7 +85,6 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_model_version"
     kapt "androidx.hilt:hilt-compiler:$hilt_view_model_version"
 
-
     // Lifecycle extensions
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
@@ -106,6 +108,11 @@ dependencies {
 
     // Data store
     implementation "androidx.datastore:datastore-preferences:$data_store_version"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-crashlytics:$crashlytic_version"
+    implementation "com.google.firebase:firebase-analytics:$analytic_version"
+    implementation "com.google.firebase:firebase-perf:$performace_version"
 
     // Testing
     testImplementation "junit:junit:$junit_version"

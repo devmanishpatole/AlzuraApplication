@@ -40,6 +40,7 @@
             style="@style/SectionLayout"
             android:fontFamily="@font/poppins_regular"
             android:hint="@string/email"
+            android:inputType="text"
             android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>

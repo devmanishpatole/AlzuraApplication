@@ -42,7 +42,7 @@ class LoginRepository @Inject constructor(
     }
 
     suspend fun logout() {
-        SessionManager.setToken("")
+        SessionManager.resetToken()
         dataStore.updateToken("")
         dataStore.updateUserStatus(loggedIn = false)
     }

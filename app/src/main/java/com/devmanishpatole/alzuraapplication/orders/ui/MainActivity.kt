@@ -121,7 +121,7 @@ class MainActivity : BaseActivity<OrderViewModel>() {
                 }
                 // Showing progress for load
                 is LoadState.Loading -> showProgressbar()
-                // Showing no comics in case of error.
+                // Showing no orders in case of error.
                 is LoadState.Error -> {
                     hideProgressbar()
                     noOrders.show()

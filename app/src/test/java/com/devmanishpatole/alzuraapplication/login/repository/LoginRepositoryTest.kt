@@ -8,6 +8,7 @@ import com.devmanishpatole.alzuraapplication.login.service.LoginService
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.runBlocking
+import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -93,5 +94,8 @@ class LoginRepositoryTest {
         coVerify { dataStore.updateUserStatus(loggedIn = false) }
         confirmVerified(dataStore)
     }
+
+    @After
+    fun tearDown() = clearAllMocks()
 
 }

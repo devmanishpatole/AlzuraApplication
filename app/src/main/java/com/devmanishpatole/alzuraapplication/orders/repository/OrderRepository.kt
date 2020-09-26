@@ -15,9 +15,8 @@ class OrderRepository @Inject constructor(
     private val networkHelper: NetworkHelper
 ) {
 
-    private lateinit var orderSource: OrdersSource
-
     fun getOrders(descending: Boolean = true, range: String? = null): Flow<PagingData<OrderData>> {
+
         return Pager(
             config = PagingConfig(
                 pageSize = PAGE_SIZE,
@@ -29,16 +28,9 @@ class OrderRepository @Inject constructor(
                     networkHelper,
                     descending,
                     range
-                ).also {
-                    orderSource = it
-                }
+                )
             }
         ).flow
-    }
-
-
-    fun refresh() {
-        orderSource.invalidate()
     }
 
     companion object {

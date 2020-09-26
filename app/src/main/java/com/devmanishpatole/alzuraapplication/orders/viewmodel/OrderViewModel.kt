@@ -13,5 +13,4 @@ class OrderViewModel @ViewModelInject constructor(
     fun getOrders(descending: Boolean = true, range: String? = null) =
         repository.getOrders(descending, range).cachedIn(viewModelScope)
 
-    fun refresh() = repository.refresh()
 }

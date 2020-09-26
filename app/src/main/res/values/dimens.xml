@@ -15,5 +15,8 @@
     <dimen name="text_small">16sp</dimen>
     <dimen name="text_extra_large">26sp</dimen>
     <dimen name="welcome_image_height_width">300dp</dimen>
+    <dimen name="selector_panel_height">50dp</dimen>
+    <dimen name="panel_divider_height">25dp</dimen>
+    <dimen name="panel_divider_width">1dp</dimen>
 
 </resources>

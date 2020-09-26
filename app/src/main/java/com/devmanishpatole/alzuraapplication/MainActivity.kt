@@ -16,6 +16,7 @@ import com.devmanishpatole.alzuraapplication.login.viewmodel.LoginViewModel
 import com.devmanishpatole.alzuraapplication.orders.adapter.OrderListAdapter
 import com.devmanishpatole.alzuraapplication.orders.adapter.OrderLoadStateAdapter
 import com.devmanishpatole.alzuraapplication.orders.viewmodel.OrderViewModel
+import com.devmanishpatole.alzuraapplication.util.ViewUtil
 import com.devmanishpatole.alzuraapplication.util.hide
 import com.devmanishpatole.alzuraapplication.util.show
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -75,7 +76,6 @@ class MainActivity : BaseActivity<OrderViewModel>() {
             date1.time = it.first ?: 0
             date2.time = it.second ?: 0
             range = "${format.format(date1)},${format.format(date2)}"
-            viewModel.refresh()
             getOrders(checkedOrder == 0, range = range)
         }
     }
@@ -89,7 +89,6 @@ class MainActivity : BaseActivity<OrderViewModel>() {
         ) { dialog, item ->
             checkedOrder = item
             dialog.dismiss()
-            viewModel.refresh()
             getOrders(checkedOrder == 0, range = range)
         }
         val alert: AlertDialog = dialog.create()
@@ -115,9 +114,10 @@ class MainActivity : BaseActivity<OrderViewModel>() {
                     hideProgressbar()
                     if (orderAdapter.itemCount == 0) {
                         noOrders.show()
+                        panel.hide()
                     } else {
-                        noOrders.hide()
-                        internetError.hide()
+                        panel.show()
+                        ViewUtil.hideView(noOrders, internetError)
                     }
                 }
                 // Showing progress for load
@@ -126,9 +126,11 @@ class MainActivity : BaseActivity<OrderViewModel>() {
                 is LoadState.Error -> {
                     hideProgressbar()
                     noOrders.show()
+                    panel.hide()
                     if ((loadState.source.refresh as LoadState.Error).error is NetworkException) {
                         internetError.show()
                     }
+
                 }
             }
 

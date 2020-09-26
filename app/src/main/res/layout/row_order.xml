@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SectionLayout"
+    android:layout_margin="@dimen/spacing_small"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:id="@+id/content"
+        style="@style/SectionLayoutPadded"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/order_id"
+            android:textSize="@dimen/text_extra_small" />
+
+        <TextView
+            android:id="@+id/orderId"
+            style="@style/SectionLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/text_medium"
+            tools:text="2019289" />
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/payment_method"
+            android:textSize="@dimen/text_extra_small" />
+
+        <TextView
+            android:id="@+id/paymentMethod"
+            style="@style/SectionLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/text_large"
+            tools:text="Title" />
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/date"
+            android:textSize="@dimen/text_extra_small" />
+
+        <TextView
+            android:id="@+id/createdDateTime"
+            style="@style/SectionLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/text_medium"
+            tools:text="Author" />
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/price"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/text_extra_small" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/SectionLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/text_medium"
+            tools:text="200$" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

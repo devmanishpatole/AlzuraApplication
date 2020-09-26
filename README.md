@@ -10,6 +10,7 @@
 ## About
 User can login into the application to see the sample orders. Application supports lazy loading of orders so users can have seamless data loading experience.
 The user can sort the orders and can also select a date range to see particular orders within that range.
+**Implemented Lifecycle aware view holder for order list which respects the lifecycle of row's view components.**
 
 
 ## Built With 

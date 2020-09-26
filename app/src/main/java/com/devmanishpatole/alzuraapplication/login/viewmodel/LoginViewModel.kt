@@ -1,5 +1,6 @@
 package com.devmanishpatole.alzuraapplication.login.viewmodel
 
+import androidx.annotation.VisibleForTesting
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -72,7 +73,8 @@ class LoginViewModel @ViewModelInject constructor(
         }
     }
 
-    private fun validateEmailAndPassword(username: String, password: String): Boolean {
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    fun validateEmailAndPassword(username: String, password: String): Boolean {
         var result = true
 
         if (username.isEmpty()) {

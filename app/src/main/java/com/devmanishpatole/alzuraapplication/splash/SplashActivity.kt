@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.viewModels
-import com.devmanishpatole.alzuraapplication.MainActivity
+import com.devmanishpatole.alzuraapplication.orders.ui.MainActivity
 import com.devmanishpatole.alzuraapplication.R
 import com.devmanishpatole.alzuraapplication.base.BaseActivity
 import com.devmanishpatole.alzuraapplication.login.ui.LoginActivity

@@ -1,8 +1,5 @@
 package com.devmanishpatole.alzuraapplication.orders.paging
 
-import android.content.Context
-import android.content.Intent
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.devmanishpatole.alzuraapplication.base.BaseDataSource
 import com.devmanishpatole.alzuraapplication.exception.NetworkException
 import com.devmanishpatole.alzuraapplication.orders.model.OrderData
@@ -51,8 +48,4 @@ class OrdersSource(
 
     override fun getNextKey(results: List<OrderData>) =
         if (results.isEmpty() || results.size < THRESHOLD) null else position + THRESHOLD
-
-    companion object {
-        const val ACTION_DATA_REFRESH = "ACTION_DATA_REFRESH"
-    }
 }

@@ -16,8 +16,6 @@ class LoginRepository @Inject constructor(
 
     fun userToken() = dataStore.tokenFlow
 
-    suspend fun updateUserStatus(loggedIn: Boolean) = dataStore.updateUserStatus(loggedIn)
-
     suspend fun login(username: String, password: String): LoginStatus {
         val status: LoginStatus
 

@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
-import com.devmanishpatole.alzuraapplication.MainActivity
+import com.devmanishpatole.alzuraapplication.orders.ui.MainActivity
 import com.devmanishpatole.alzuraapplication.R
 import com.devmanishpatole.alzuraapplication.base.BaseActivity
 import com.devmanishpatole.alzuraapplication.login.viewmodel.LoginViewModel

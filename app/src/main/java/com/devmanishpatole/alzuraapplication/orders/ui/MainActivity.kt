@@ -1,4 +1,4 @@
-package com.devmanishpatole.alzuraapplication
+package com.devmanishpatole.alzuraapplication.orders.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
+import com.devmanishpatole.alzuraapplication.R
 import com.devmanishpatole.alzuraapplication.base.BaseActivity
 import com.devmanishpatole.alzuraapplication.exception.NetworkException
 import com.devmanishpatole.alzuraapplication.login.ui.LoginActivity
@@ -114,9 +115,7 @@ class MainActivity : BaseActivity<OrderViewModel>() {
                     hideProgressbar()
                     if (orderAdapter.itemCount == 0) {
                         noOrders.show()
-                        panel.hide()
                     } else {
-                        panel.show()
                         ViewUtil.hideView(noOrders, internetError)
                     }
                 }
@@ -126,7 +125,6 @@ class MainActivity : BaseActivity<OrderViewModel>() {
                 is LoadState.Error -> {
                     hideProgressbar()
                     noOrders.show()
-                    panel.hide()
                     if ((loadState.source.refresh as LoadState.Error).error is NetworkException) {
                         internetError.show()
                     }

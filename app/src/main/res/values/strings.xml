@@ -17,8 +17,8 @@
     <string name="filter">Date Range</string>
     <string name="no_orders_found">No orders found!</string>
     <string name="select_sort_order">Select a sort order</string>
-    <string name="descending">Descending</string>
-    <string name="ascending">Ascending</string>
+    <string name="descending">Latest first</string>
+    <string name="ascending">Oldest first</string>
     <string name="welcome">Welcome!</string>
     <string name="welcome_message">Enter your email and password to sign in to your account</string>
 </resources>
